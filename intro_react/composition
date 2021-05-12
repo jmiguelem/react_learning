@@ -1,0 +1,20 @@
+//Get profile pic
+function ProfilePic(username){
+    return (<img alt={username}
+    src = {'httos:/github.com/' + username + '.pmg?size=200'}/> )
+}
+
+//Get profile url
+function ProfileLink(username){
+    return <a href={'https://github.com/' + username}>{username}</a>
+}
+
+//Returns an object with the img and url of the porfile
+function Profile(username){
+    return(
+        <div className = 'profile'>
+        <ProfilePic username = 'username'/>
+        <ProfileLink username = 'username'/>
+        </div>
+    )
+}
