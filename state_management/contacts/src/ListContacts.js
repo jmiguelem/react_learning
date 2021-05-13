@@ -1,11 +1,11 @@
 import React from 'react'
 
-class ListContacts extends React.Component{
-    render(){
-        return (
-            <ol className = 'contact-list'>
+//Stateless Functional Component
+function ListContacts(props){
+    return (
+        <ol className = 'contact-list'>
                 {
-                    this.props.contacts.map((contact) => (
+                    props.contacts.map((contact) => (
                         <li key={contact.id} className='contact-list-item'>
                             <div className='contact-avatar'
                             style={{
@@ -21,8 +21,7 @@ class ListContacts extends React.Component{
                     ))
                 }
             </ol>
-        )
-    }
+    );
 }
 
 export default ListContacts
